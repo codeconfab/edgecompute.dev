@@ -33,13 +33,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    name: Build
     steps:
       - uses: actions/checkout@v4
-      - uses: jdx/mise-action@v2
 
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
+      - uses: jdx/mise-action@v2
 
       - uses: actions/setup-node@v5
         with:
@@ -47,32 +45,17 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
-        working-directory: ${{ env.BUILD_PATH }}
 
       - name: Build with Astro
-        run: |
-          pnpm astro build \
-            --site "${{ steps.pages.outputs.origin }}" \
-            --base "${{ steps.pages.outputs.base_path }}"
+        run: pnpm astro build
 
       - name: Build Pagefind Index
-        run: |
-          pnpm run postbuild
-        working-directory: ${{ env.BUILD_PATH }}
+        run: pnpm run postbuild
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload to pgs
+        uses: picosh/pgs-action@v3
         with:
-          path: ${{ env.BUILD_PATH }}/dist
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    name: Deploy
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          user: supaspoida
+          key: ${{ secrets.PRIVATE_KEY }}
+          src: dist/
+          project: edgecompute-dev
