@@ -41,6 +41,10 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
+      - uses: actions/setup-node@v5
+        with:
+          cache: 'pnpm'
+
       - name: Install dependencies
         run: pnpm install
         working-directory: ${{ env.BUILD_PATH }}
