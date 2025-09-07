@@ -2,7 +2,7 @@
 #
 # To get started with Astro see: https://docs.astro.build/en/getting-started/
 #
-name: Deploy Astro site to Pages
+name: Deploy Astro site to pgs.sh
 
 on:
   # Runs on pushes targeting the default branch
@@ -24,11 +24,6 @@ concurrency:
   group: 'pages'
   cancel-in-progress: false
 
-env:
-  MISE_EXPERIMENTAL: true
-  BUILD_PATH: '.' # default value when not using subfolders
-  # BUILD_PATH: subfolder
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -37,22 +32,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Set outputs
+        id: vars
+        run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+
       - uses: jdx/mise-action@v2
+        with:
+          experimental: true
 
       - uses: actions/setup-node@v5
         with:
-          cache: 'pnpm'
+          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install
 
       - name: Build with Astro
-        run: pnpm astro build
+        run: pnpm run build
 
-      - name: Build Pagefind Index
-        run: pnpm run postbuild
-
-      - name: Upload to pgs
+      - name: Upload to pgs.sh
         uses: picosh/pgs-action@v3
         with:
           user: supaspoida
