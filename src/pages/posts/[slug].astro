@@ -42,6 +42,7 @@ if (addendum.length > 0) {
   addendumAvatarImage = addendumEntry.data.avatarImage
 }
 
+const AddendumEnabled = AddendumContent && false
 const sortedPosts = await getSortedPosts()
 
 // Get series posts if this post is part of a series
@@ -119,7 +120,7 @@ if (postData.tags && postData.tags.length > 0) {
     )
   }
   {
-    AddendumContent && (
+    AddendumEnabled && (
       <PostAddendum avatarImage={addendumAvatarImage}>
         <AddendumContent />
       </PostAddendum>
