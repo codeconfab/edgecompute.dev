@@ -1,5 +1,5 @@
 ---
-title: 'Tech Debt as Metaphor'
+title: 'Unpacking the Tech Debt Metaphor'
 published: 2019-03-18
 description: 'Some thoughts on the use and abuse of the Tech Debt metaphor.'
 tags: ['tech debt']
