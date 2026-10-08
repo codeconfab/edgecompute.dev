@@ -2,21 +2,25 @@
 title: 'Tech Debt as Metaphor'
 published: 2019-03-18
 description: 'Some thoughts on the use and abuse of the Tech Debt metaphor.'
-series: 'Taming Tech Debt'
 tags: ['tech debt']
 ---
 
 :::note
-This post was originally published as a thread on Twitter. It has been lightly edited to fix typos and spelling but otherwise left as is.
+This post was originally published as a thread on Twitter. I am exhuming it from the ruins of that site as an archive of some of my thinking on the use of tech debt as a metaphor that can be shared in good conscience. It has been lightly edited to fix typos and spelling but otherwise left as is.
 :::
 
 Gonna do a thread with some thoughts on "technical debt", why I stopped using this metaphor with my clients and the teams I work with, and what I use instead. I've come to believe misuse of the debt metaphor has led to immense hidden costs and harm to software projects.
 
 First, a bit of history about the origin of the metaphor. In 1992 Ward Cunningham wrote an 'experience report' where he describes the idea of technical debt while working on a financial services application: https://c2.com/doc/oopsla92.html
 
-The relevant line from the report: "Shipping first time code is like going into debt. A little debt speeds development so long as it is paid back promptly with a rewrite." This matches pretty well with the first cause listed on wikipedia.
+The relevant line from the report: "Shipping first time code is like going into debt. A little debt speeds development so long as it is paid back promptly with a rewrite." This matches pretty well with the first cause listed on wikipedia:
+
+![Insufficient up-front definition, where requirements are still being defined during development, development starts before any design takes place. This is done to save time but often has to be reworked later.](./tech-debt-thread-0001.jpg)
 
 Unfortunately, the list goes on for a dozen more items, none of which have much to do with the original definition. This suggests that the metaphor is bearing far too much weight and may not be conveying the message it's meant to.
+
+![Six things that are called tech debt that don't fit the metaphor](./tech-debt-thread-0002.jpg)
+![Seven additional things that are called tech debt that don't fit the metaphor](./tech-debt-thread-0003.jpg)
 
 To understand how this happened, we can take a closer look at the context and process that lead to the metaphor. In order to communicate some risk, Cunningham needed to bridge a gap in understanding about software engineering practices with a stakeholder.
 
