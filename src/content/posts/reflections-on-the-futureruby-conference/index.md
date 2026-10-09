@@ -1,7 +1,7 @@
 ---
 title: 'Inventing the Future by Owning It: Reflections on the FutureRuby Conference'
 published: 2009-08-02
-description: 'Inventing the Future by Owning It: Reflections on the FutureRuby Conference'
+description: 'I recently attended the FutureRuby conference in Toronto, Ontario CA. It was put on by the incredible people at Unspace & was exactly what I needed at this point in my life.'
 tags: ['ruby']
 ---
 
