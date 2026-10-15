@@ -52,7 +52,7 @@
     "sanitize-html": "^2.18.0",
     "satori": "^0.18.2",
     "satori-html": "^0.3.2",
-    "tailwindcss": "^4.1.13",
+    "tailwindcss": "^4.3.3",
     "typescript": "^5.9.2",
     "unified": "^11.0.5",
     "unist-util-visit": "^5.0.0"
