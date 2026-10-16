@@ -1,3 +1,5 @@
+[![Depfu](https://badges.depfu.com/badges/3c03201efdc9bd148e70d67f6d840c6d/overview.svg)](https://depfu.com/github/codeconfab/edgecompute.dev?project_id=71559)
+
 # MultiTerm Astro 🎨⚡️
 
 **MultiTerm** is an Astro blog theme designed for coders who love their color schemes. Easily theme your whole website with your favorite color schemes and have your prose rendered with a nod to the aesthetics of raw markdown.
