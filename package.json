@@ -62,7 +62,7 @@
     "@types/sanitize-html": "^2.16.2",
     "pagefind": "^1.5.2",
     "prettier": "3.9.10",
-    "prettier-plugin-astro": "1.1.0",
+    "prettier-plugin-astro": "1.1.1",
     "sass-embedded": "^1.105.1",
     "sharp": "^0.35.5"
   }
