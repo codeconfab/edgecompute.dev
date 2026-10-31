@@ -55,7 +55,7 @@
     "tailwindcss": "^4.3.3",
     "typescript": "^7.0.2",
     "unified": "^11.0.5",
-    "unist-util-visit": "^5.1.0"
+    "unist-util-visit": "^5.2.0"
   },
   "devDependencies": {
     "@types/markdown-it": "^14.2.0",
